@@ -2,17 +2,6 @@ import { Avatar } from "./components/Avatar";
 import { Navbar } from "./components/Navbar";
 import "./globals.css";
 
-const LINKS = [
-  {
-    text: "Home",
-    url: "/",
-  },
-  {
-    text: "Blog",
-    url: "/blog",
-  },
-];
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +12,16 @@ export default function RootLayout({
       <body>
         <main className="flex flex-col justify-center items-center">
           <Navbar
-            links={LINKS}
+            links={[
+              {
+                text: "About",
+                url: "/about",
+              },
+              {
+                text: "Blog",
+                url: "/blog",
+              },
+            ]}
             avatar={
               <Avatar
                 href="/"
