@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Home from "./page";
 
 describe("HomePage", () => {
-  it('Should return "Nikita" text', () => {
+  it('Should return "Header" text', () => {
     render(<Home />);
 
     expect(screen.getByText(/Home/)).toBeDefined();
